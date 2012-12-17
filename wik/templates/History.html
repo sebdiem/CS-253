@@ -1,0 +1,13 @@
+{% include 'Top.html' %}
+			{% for h in history %}
+				<div class="history">
+					<span>{{h[0]}}</span><span>{{h[1]}}</span>
+					<span class="editview">
+						<a href="{{page_name}}?v={{loop.index}}">view</a>&nbsp;
+						<a href="/_edit{{page_name}}?v={{loop.index}}">edit</a>
+					</span>
+				</div>
+			{% endfor %}
+		</div>
+	</body>
+</html>

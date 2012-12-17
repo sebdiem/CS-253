@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Log in</title>
+		<style type="text/css">
+			.container {
+				width: 300px;
+				clear: both;
+				margin: 0 0 20px 0;
+			}
+			.container label {
+				display: block;
+				width: 125px;
+				float: left;
+			}
+			.error {
+				color: red
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Log in</h1>
+		<div class="container">
+		<form method="post">
+			<label>Username:</label>
+			<input name="username" value="{{username}}" type="text"><div class="error">{{username_error}}</div><br>
+			<label>Password:</label>
+			<input name="password" value="{{password}}" type="password"><div class="error">{{password_error}}</div><br>
+			<div class="error">{{error}}</div>
+			<input type="submit">
+		</form>
+		</div>
+		<div>
+			Not registered yet? <a href="/signup">Sign up!</a>
+		</div>
+	</body>
+</html>

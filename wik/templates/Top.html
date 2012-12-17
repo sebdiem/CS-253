@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{page_name}}</title>
+		<style type="text/css">
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			#content {
+				width: 60%;
+			}
+			#top {	
+				width : 100%;
+				text-align: right;
+				margin: 0 0 10px 0;
+			}
+			.top-menu {
+				font-size: 12px;
+				margin: 0 10px 0 0;
+				color: grey;
+			}
+			.top-menu a {
+				color: grey;
+				text-decoration: none;
+			}
+			.top-menu a:hover {
+				text-decoration: underline;
+			}
+			.error {
+				color: red;
+				margin: 10px 0px 10px 0px;
+			}
+			.history span {
+				margin: 0 30px 0 0;
+			}
+			.history .editview {
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div id="top">
+				<span class="top-menu">
+					{% if username %}
+					<a href="/_edit{{page_name}}">edit</a> |
+					{% endif %}
+					{% if view=="history" %}
+					<a href="{{page_name}}">view</a>
+					{% else %}
+					<a href="/_history{{page_name}}">history</a>
+					{% endif %}
+				</span>
+				<span class="top-menu">
+					{% if username %}
+						{{username}}&nbsp;<a href="/logout">(logout)</a>
+					{% else %}
+						<a href="/login">log in</a>
+					{% endif %}
+				</span>
+			</div>

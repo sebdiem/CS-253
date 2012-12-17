@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sign Up</title>
+		<style type="text/css">
+			.container {
+				width: 300px;
+				clear: both;
+			}
+			.container label {
+				display: block;
+				width: 125px;
+				float: left;
+			}
+			.error {color: red}
+		</style>
+	</head>
+	<body>
+		<h1>Sign Up</h1>
+		<div class="container">
+		<form method="post">
+			<label>Username:</label>
+			<input name="username" value="{{username}}" type="text"><div class="error">{{username_error}}</div><br>
+			<label>Password:</label>
+			<input name="password" value="{{password}}" type="password"><div class="error">{{password_error}}</div><br>
+			<label>Verify password:</label>
+			<input name="verify" value="{{verify}}" type="password"><div class="error">{{verify_error}}</div><br>
+			<label>Email (optional):</label>
+			<input name="email" value="{{email}}" type="text"><div class="error">{{email_error}}</div><br>
+			<input type="submit">
+		</form>
+		</div>
+	</body>
+</html>
